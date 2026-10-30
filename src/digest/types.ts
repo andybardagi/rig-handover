@@ -19,4 +19,5 @@ export type ReadNightResult = {
 };
 
 // readNight(runsDir, night). The reader implements this; the signature lives here.
-export type ReadNight = (runsDir: string, night: string) => ReadNightResult;
+// null means the night has no file (the routes answer 404).
+export type ReadNight = (runsDir: string, night: string) => ReadNightResult | null;
